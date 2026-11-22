@@ -3,20 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>GRRITARA.PL | Serwis, naprawa i regulacja gitar</title>
+    <title>Serwis gitar Szczecin | Regulacja i naprawa gitar – GRRITARA.PL</title>
     <meta
       name="description"
-      content="GRRITARA.PL — serwis, naprawa i regulacja gitar elektrycznych i akustycznych. Gryf, akcja strun, progi, siodełka, mostki, osprzęt i diagnostyka."
+      content="Serwis gitar w Szczecinie. GRRITARA.PL reguluje gitary elektryczne, akustyczne i basowe, ustala zakres prac i podaje wycenę przed naprawą."
     />
     <link rel="canonical" href="https://grritara.pl/" />
+    <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#070708" />
+    <!-- Google Search Console: wklej tu meta name="google-site-verification" content="KOD", gdy dostaniesz kod. -->
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pl_PL" />
     <meta property="og:site_name" content="GRRITARA.PL" />
-    <meta property="og:title" content="GRRITARA.PL | Serwis, naprawa i regulacja gitar" />
+    <meta property="og:title" content="Serwis gitar Szczecin | Regulacja i naprawa gitar – GRRITARA.PL" />
     <meta
       property="og:description"
-      content="Regulacja i naprawa gitar elektrycznych i akustycznych. Gryf, progi, siodełka, mostki i osprzęt."
+      content="Regulacja i serwis gitar elektrycznych, akustycznych i basowych w Szczecinie. Zakres prac i wycena przed naprawą."
     />
     <meta property="og:url" content="https://grritara.pl/" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
@@ -25,10 +27,19 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "ProfessionalService",
+        "@type": "LocalBusiness",
         "name": "GRRITARA.PL",
         "url": "https://grritara.pl/",
-        "description": "Serwis, naprawa i regulacja gitar elektrycznych i akustycznych."
+        "description": "Serwis i regulacja gitar w Szczecinie. Regulacja, setup, progi, siodełka, mostki, elektronika i konserwacja.",
+        "areaServed": {
+          "@type": "City",
+          "name": "Szczecin"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Szczecin",
+          "addressCountry": "PL"
+        }
       }
     </script>
   </head>
@@ -50,11 +61,11 @@
         </button>
         <nav id="nav-menu" class="nav-menu" aria-label="Sekcje strony">
           <a href="#uslugi">Usługi</a>
+          <a href="#proces">Proces</a>
           <a href="#realizacje">Realizacje</a>
           <a href="#cennik">Cennik</a>
           <a href="#pracownia">Pracownia</a>
-          <a href="#kontakt">Kontakt</a>
-          <a class="button" href="#kontakt">Napisz</a>
+          <a class="button" href="#kontakt">Wycena</a>
         </nav>
       </div>
     </header>
@@ -62,13 +73,13 @@
     <main id="tresc">
       <section class="hero wrap" id="start">
         <div class="hero-copy">
-          <p class="eyebrow">Serwis gitar</p>
-          <h1>Twoja gitara. Precyzyjna regulacja.</h1>
+          <p class="eyebrow">Szczecin</p>
+          <h1>Serwis i regulacja gitar w Szczecinie</h1>
           <p class="lead">
-            Naprawa i regulacja gitar elektrycznych i akustycznych: gryf, akcja strun, progi,
-            siodełka, mostki i osprzęt. Zakres i wycenę ustalamy po obejrzeniu instrumentu.
+            Regulacja i serwis gitar elektrycznych, akustycznych i basowych. Zadbaj o wygodę gry,
+            prawidłowe strojenie i stan techniczny swojego instrumentu.
           </p>
-          <a class="button" href="#kontakt">Skontaktuj się</a>
+          <a class="button" href="#kontakt">Umów wstępną konsultację</a>
         </div>
         <!-- Podmiana zdjęcia: wgraj plik i zmień src, np. images/hero/instrument.jpg -->
         <figure class="hero-figure">
@@ -76,7 +87,7 @@
             src="images/hero/instrument.svg"
             width="900"
             height="1120"
-            alt="Graficzne miejsce na zdjęcie instrumentu. To nie jest fotografia realizacji."
+            alt="Puste miejsce na zdjęcie gitary w pracowni GRRITARA w Szczecinie. To nie jest fotografia realizacji."
             fetchpriority="high"
           />
           <figcaption>Miejsce na zdjęcie instrumentu</figcaption>
@@ -87,109 +98,192 @@
         <div class="wrap">
           <div class="section-heading">
             <p class="eyebrow">Usługi</p>
-            <h2>Co można zlecić</h2>
+            <h2>Zakres prac serwisowych</h2>
             <p class="section-intro">
-              Poniżej jest zakres prac serwisowych. Każdy instrument oglądamy osobno. Przed
-              rozpoczęciem naprawy omawiamy zakres i podajemy wycenę.
+              Każdą gitarę oglądamy osobno. Poniżej jest to, co można zlecić. Kwoty wpisuje się
+              tylko w cenniku. Dopóki pole jest puste, konkretną cenę podajemy po diagnostyce.
             </p>
           </div>
           <div class="service-grid">
-            <article class="service-card">
-              <h3>Regulacja gitar elektrycznych i akustycznych</h3>
+            <article class="service-card" id="regulacja-gitar">
+              <h3>Regulacja gitar</h3>
               <p>
-                Ustawienie instrumentu tak, aby grał równo i dało się na nim wygodnie grać.
-                Obejmuje sprawdzenie gryfu, akcji strun, menzury i podstawowych punktów strojenia.
+                Ustawienie gitary elektrycznej, akustycznej albo basowej tak, aby grała równo i
+                dało się na niej wygodnie grać.
               </p>
+              <dl class="service-meta">
+                <div>
+                  <dt>Kiedy jest potrzebna</dt>
+                  <dd>Gitara stroi nierówno wzdłuż gryfu albo dawno nie była ustawiana.</dd>
+                </div>
+                <div>
+                  <dt>Zakres</dt>
+                  <dd>Sprawdzenie gryfu, menzury i podstawowych punktów strojenia. Jeśli instrument ma pręt napinający, jego ustawienie wchodzi w tę pracę.</dd>
+                </div>
+                <div>
+                  <dt>Cena</dt>
+                  <dd><a href="#cena-regulacja">Cena stała, do wpisania w cenniku.</a></dd>
+                </div>
+              </dl>
             </article>
-            <article class="service-card">
-              <h3>Regulacja gryfu i akcji strun</h3>
-              <p>
-                Ustawienie pręta napinającego, jeśli gitara go ma, oraz wysokości strun nad
-                progami. Chodzi o stabilny gryf i akcję dobraną do sposobu grania.
-              </p>
+
+            <article class="service-card" id="setup-akcji">
+              <h3>Setup i ustawienie akcji strun</h3>
+              <p>Wysokość strun nad progami, dobrana do sposobu grania na tym instrumencie.</p>
+              <dl class="service-meta">
+                <div>
+                  <dt>Kiedy jest potrzebna</dt>
+                  <dd>Struny są za wysoko albo za nisko, gra męczy dłoń albo przy zwykłym graniu słychać brzęczenie.</dd>
+                </div>
+                <div>
+                  <dt>Zakres</dt>
+                  <dd>Ustawienie akcji. Jeśli przy oględzinach widać, że trzeba ruszyć też mostek albo menzurę, dokładamy to do zakresu przed wyceną.</dd>
+                </div>
+                <div>
+                  <dt>Cena</dt>
+                  <dd><a href="#cena-setup">Cena od kwoty, którą trzeba uzupełnić w cenniku.</a></dd>
+                </div>
+              </dl>
             </article>
-            <article class="service-card">
-              <h3>Szlifowanie, wyrównywanie i polerowanie progów</h3>
-              <p>
-                Wyrównanie progów, które brzęczą albo są nierówne, a potem ich wykończenie.
-                Zakres zależy od stanu gryfu i samych progów.
-              </p>
+
+            <article class="service-card" id="progi">
+              <h3>Wyrównywanie, koronowanie i polerowanie progów</h3>
+              <p>Praca przy progach, które są nierówne, płaskie albo chropowate.</p>
+              <dl class="service-meta">
+                <div>
+                  <dt>Kiedy jest potrzebna</dt>
+                  <dd>Brzęczenie wraca mimo regulacji akcji albo progi haczą przy podciąganiu strun.</dd>
+                </div>
+                <div>
+                  <dt>Zakres</dt>
+                  <dd>Wyrównanie progów, nadanie im kształtu i polerowanie. Ile materiału schodzi, zależy od zużycia. Wymiana progów nie jest osobną pozycją oferty. Jeśli byłaby potrzebna, wraca jako osobna wycena po diagnostyce.</dd>
+                </div>
+                <div>
+                  <dt>Cena</dt>
+                  <dd><a href="#cena-progi">Cena od kwoty do wpisania. Zakres zużycia zmienia koszt.</a></dd>
+                </div>
+              </dl>
             </article>
-            <article class="service-card">
-              <h3>Wymiana i wykonywanie siodełek</h3>
-              <p>
-                Wymiana zużytego siodełka albo wykonanie nowego, dopasowanego do szerokości gryfu
-                i przekroju strun.
-              </p>
+
+            <article class="service-card" id="siodelka">
+              <h3>Siodełka</h3>
+              <p>Wymiana zużytego siodełka albo wykonanie nowego pod gryf i struny.</p>
+              <dl class="service-meta">
+                <div>
+                  <dt>Kiedy jest potrzebna</dt>
+                  <dd>Puste struny brzęczą, leżą za wysoko przy pierwszych progach albo rowki są głęboko wycięte.</dd>
+                </div>
+                <div>
+                  <dt>Zakres</dt>
+                  <dd>Założenie nowego siodełka albo wykonanie go pod szerokość gryfu i przekrój strun. Materiał jest kosztem dodatkowym i pojawia się w wycenie przed pracą.</dd>
+                </div>
+                <div>
+                  <dt>Cena</dt>
+                  <dd><a href="#cena-siodelka">Wymiana ma pole na cenę stałą, wykonanie na cenę od.</a></dd>
+                </div>
+              </dl>
             </article>
-            <article class="service-card">
+
+            <article class="service-card" id="mostki">
               <h3>Regulacja mostków</h3>
-              <p>
-                Ustawienie mostka stałego, tremolo albo mostka w gitarze akustycznej: wysokość,
-                oktawy i punkt podparcia strun.
-              </p>
+              <p>Ustawienie mostka stałego, tremolo albo mostka w gitarze akustycznej.</p>
+              <dl class="service-meta">
+                <div>
+                  <dt>Kiedy jest potrzebna</dt>
+                  <dd>Oktawy się rozjeżdżają, mostek jest za wysoko lub za nisko, a tremolo nie wraca w to samo miejsce.</dd>
+                </div>
+                <div>
+                  <dt>Zakres</dt>
+                  <dd>Wysokość, oktawy i punkt podparcia strun. Rodzaj mostka ustalamy przy oględzinach.</dd>
+                </div>
+                <div>
+                  <dt>Cena</dt>
+                  <dd><a href="#cena-mostek">Cena od kwoty do wpisania, bo mostki różnią się zakresem pracy.</a></dd>
+                </div>
+              </dl>
             </article>
-            <article class="service-card">
-              <h3>Wymiana osprzętu</h3>
-              <p>
-                Wymiana elementów takich jak klucze, przetworniki, potencjometry, gniazdo czy
-                zaczep strun. Osprzęt przynosisz ze sobą albo ustalamy go przed zleceniem.
-              </p>
+
+            <article class="service-card" id="elektronika">
+              <h3>Elektronika</h3>
+              <p>Wymiana i podłączenie osprzętu elektrycznego, który już jest w zakresie pracowni.</p>
+              <dl class="service-meta">
+                <div>
+                  <dt>Kiedy jest potrzebna</dt>
+                  <dd>Gitara milknie, dźwięk przerywa albo szum wiąże się z gniazdem, potencjometrem, przełącznikiem lub przetwornikiem.</dd>
+                </div>
+                <div>
+                  <dt>Zakres</dt>
+                  <dd>Wymiana przetworników, potencjometrów, przełącznika i gniazda oraz ich podłączenie. Części przynosisz albo ustalamy je wcześniej. Ich koszt dopisujemy osobno, zanim zaczniemy.</dd>
+                </div>
+                <div>
+                  <dt>Cena</dt>
+                  <dd><a href="#cena-elektronika">Wycena indywidualna. Kwoty pracy jeszcze nie ma w cenniku.</a></dd>
+                </div>
+              </dl>
             </article>
-            <article class="service-card">
-              <h3>Podstawowa konserwacja</h3>
-              <p>
-                Czyszczenie gryfu i podstrunnicy, pielęgnacja drewna, kontrola mocowań i drobne
-                prace porządkowe przy instrumencie.
-              </p>
+
+            <article class="service-card" id="konserwacja">
+              <h3>Konserwacja</h3>
+              <p>Podstawowe czyszczenie i pielęgnacja instrumentu, bez rozbierania naprawy na części.</p>
+              <dl class="service-meta">
+                <div>
+                  <dt>Kiedy jest potrzebna</dt>
+                  <dd>Gryf jest suchy, gitara jest zabrudzona albo chcesz sprawdzić mocowania przy okazji przeglądu.</dd>
+                </div>
+                <div>
+                  <dt>Zakres</dt>
+                  <dd>Czyszczenie gryfu i podstrunnicy, pielęgnacja drewna i kontrola mocowań.</dd>
+                </div>
+                <div>
+                  <dt>Cena</dt>
+                  <dd><a href="#cena-konserwacja">Cena stała, do wpisania w cenniku.</a></dd>
+                </div>
+              </dl>
             </article>
-            <article class="service-card">
-              <h3>Diagnostyka i wycena napraw</h3>
+
+            <article class="service-card" id="diagnostyka">
+              <h3>Diagnostyka i naprawy</h3>
               <p>
-                Oględziny instrumentu, wskazanie przyczyny problemu i propozycja zakresu prac
-                razem z wyceną, zanim zacznie się naprawa.
+                Oględziny, gdy przyczyna nie jest jasna, oraz naprawy, które wychodzą poza listę
+                powyżej.
               </p>
+              <dl class="service-meta">
+                <div>
+                  <dt>Kiedy jest potrzebna</dt>
+                  <dd>Problem nie wynika wprost z regulacji, progów, siodełka, mostka, elektroniki albo konserwacji. Dotyczy to też uszkodzeń, których nie da się wycenić z opisu.</dd>
+                </div>
+                <div>
+                  <dt>Zakres</dt>
+                  <dd>Wskazanie przyczyny i propozycja prac. Naprawę spoza listy wyceniamy osobno. Nie zaczynamy jej bez akceptacji zakresu i kwoty.</dd>
+                </div>
+                <div>
+                  <dt>Cena</dt>
+                  <dd><a href="#cena-diagnostyka">Diagnostyka ma puste pole kwoty. Naprawa spoza listy jest wyceną indywidualną.</a></dd>
+                </div>
+              </dl>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="realizacje">
+      <section class="section" id="proces">
         <div class="wrap">
           <div class="section-heading">
-            <p class="eyebrow">Realizacje</p>
-            <h2>Zdjęcia prac</h2>
+            <p class="eyebrow">Proces</p>
+            <h2>Jak wygląda zlecenie</h2>
             <p class="section-intro">
-              Galeria czeka na własne fotografie napraw, regulacji i instrumentów. Plansze poniżej
-              są tylko miejscem na zdjęcia. Nie pokazują wykonanych zleceń.
+              Termin ustalamy przy konkretnej gitarze. Nie podajemy tu stałego czasu realizacji
+              ani gwarancji, których jeszcze nie opisaliśmy.
             </p>
           </div>
-          <div class="gallery-grid">
-            <figure class="media">
-              <img src="images/gallery/regulacja-gryf.svg" width="1200" height="900" alt="Miejsce na zdjęcie regulacji gryfu." loading="lazy" />
-              <figcaption>Regulacja gryfu — zdjęcie do dodania</figcaption>
-            </figure>
-            <figure class="media">
-              <img src="images/gallery/akcja-strun.svg" width="1200" height="900" alt="Miejsce na zdjęcie ustawienia akcji strun." loading="lazy" />
-              <figcaption>Akcja strun — zdjęcie do dodania</figcaption>
-            </figure>
-            <figure class="media">
-              <img src="images/gallery/progi.svg" width="1200" height="900" alt="Miejsce na zdjęcie pracy przy progach." loading="lazy" />
-              <figcaption>Progi — zdjęcie do dodania</figcaption>
-            </figure>
-            <figure class="media">
-              <img src="images/gallery/siodelko.svg" width="1200" height="900" alt="Miejsce na zdjęcie siodełka." loading="lazy" />
-              <figcaption>Siodełko — zdjęcie do dodania</figcaption>
-            </figure>
-            <figure class="media">
-              <img src="images/gallery/mostek.svg" width="1200" height="900" alt="Miejsce na zdjęcie regulacji mostka." loading="lazy" />
-              <figcaption>Mostek — zdjęcie do dodania</figcaption>
-            </figure>
-            <figure class="media">
-              <img src="images/gallery/osprzet.svg" width="1200" height="900" alt="Miejsce na zdjęcie wymiany osprzętu." loading="lazy" />
-              <figcaption>Osprzęt — zdjęcie do dodania</figcaption>
-            </figure>
-          </div>
+          <ol class="steps">
+            <li>Kontakt i opis problemu.</li>
+            <li>Wstępna konsultacja albo oględziny instrumentu.</li>
+            <li>Diagnoza i przedstawienie wyceny.</li>
+            <li>Akceptacja zakresu prac.</li>
+            <li>Wykonanie naprawy.</li>
+            <li>Kontrola instrumentu i odbiór.</li>
+          </ol>
         </div>
       </section>
 
@@ -199,123 +293,157 @@
             <p class="eyebrow">Cennik</p>
             <h2>Kwoty do wpisania</h2>
             <p class="section-intro">
-              Układ jest gotowy, kwot jeszcze nie ma. Wpisz je w miejsce oznaczone jako szkic.
-              Do tego czasu przy każdym zleceniu obowiązuje wycena po diagnostyce.
+              Edytuj wyłącznie tekst obok znacznika „szkic”. Proste prace mają miejsce na cenę
+              stałą, szersze na cenę od podanej kwoty, a nietypowe na wycenę indywidualną. Żadnej
+              z tych kwot jeszcze nie ustaliliśmy.
             </p>
           </div>
-
-          <!-- CENA: zamień „do uzupełnienia” na kwotę, np. 150 zł -->
+          <!--
+            AKTUALIZACJA CEN: zamieniaj tylko „do uzupełnienia”.
+            Przykład ceny stałej: 120 zł
+            Przykład ceny od: od 180 zł
+            Nie wpisuj kwoty, której nie chcesz publikować.
+          -->
           <div class="price-group">
-            <h3>Regulacja</h3>
+            <h3>Cena stała</h3>
             <ul class="price-list">
-              <li>
+              <li id="cena-regulacja">
                 <div>
-                  <strong>Gitara elektryczna</strong>
-                  <p>Regulacja podstawowa.</p>
+                  <strong>Regulacja gitary</strong>
+                  <p>Elektryczna, akustyczna albo basowa. Jedno pole na wspólną kwotę albo rozpisz trzy wiersze, gdy ceny się rozjadą.</p>
                 </div>
-                <p class="price"><span class="draft-tag">szkic</span>do uzupełnienia</p>
+                <p class="price"><span class="price-kind">cena stała</span><span class="draft-tag">szkic</span>do uzupełnienia</p>
               </li>
-              <li>
-                <div>
-                  <strong>Gitara akustyczna</strong>
-                  <p>Regulacja podstawowa.</p>
-                </div>
-                <p class="price"><span class="draft-tag">szkic</span>do uzupełnienia</p>
-              </li>
-              <li>
-                <div>
-                  <strong>Gryf</strong>
-                  <p>Ustawienie pręta i sprawdzenie reliefu.</p>
-                </div>
-                <p class="price"><span class="draft-tag">szkic</span>do uzupełnienia</p>
-              </li>
-              <li>
-                <div>
-                  <strong>Akcja strun</strong>
-                  <p>Wysokość strun nad progami.</p>
-                </div>
-                <p class="price"><span class="draft-tag">szkic</span>do uzupełnienia</p>
-              </li>
-            </ul>
-          </div>
-
-          <div class="price-group">
-            <h3>Progi</h3>
-            <ul class="price-list">
-              <li>
-                <div>
-                  <strong>Wyrównanie i szlif</strong>
-                  <p>Zakres zależy od zużycia progów.</p>
-                </div>
-                <p class="price"><span class="draft-tag">szkic</span>do uzupełnienia</p>
-              </li>
-              <li>
-                <div>
-                  <strong>Polerowanie</strong>
-                  <p>Wykończenie po wyrównaniu albo jako osobna praca.</p>
-                </div>
-                <p class="price"><span class="draft-tag">szkic</span>do uzupełnienia</p>
-              </li>
-            </ul>
-          </div>
-
-          <div class="price-group">
-            <h3>Siodełka</h3>
-            <ul class="price-list">
-              <li>
+              <li id="cena-siodelka">
                 <div>
                   <strong>Wymiana siodełka</strong>
-                  <p>Założenie nowego siodełka.</p>
+                  <p>Sama praca. Materiał doliczamy osobno.</p>
                 </div>
-                <p class="price"><span class="draft-tag">szkic</span>do uzupełnienia</p>
+                <p class="price"><span class="price-kind">cena stała</span><span class="draft-tag">szkic</span>do uzupełnienia</p>
               </li>
-              <li>
+              <li id="cena-konserwacja">
                 <div>
-                  <strong>Wykonanie siodełka</strong>
-                  <p>Siodełko dopasowane do gryfu i strun.</p>
+                  <strong>Konserwacja</strong>
+                  <p>Czyszczenie, pielęgnacja drewna i kontrola mocowań.</p>
                 </div>
-                <p class="price"><span class="draft-tag">szkic</span>do uzupełnienia</p>
+                <p class="price"><span class="price-kind">cena stała</span><span class="draft-tag">szkic</span>do uzupełnienia</p>
+              </li>
+              <li id="cena-diagnostyka">
+                <div>
+                  <strong>Diagnostyka</strong>
+                  <p>Oględziny i propozycja zakresu, zanim zacznie się naprawa.</p>
+                </div>
+                <p class="price"><span class="price-kind">cena stała</span><span class="draft-tag">szkic</span>do uzupełnienia</p>
               </li>
             </ul>
           </div>
 
           <div class="price-group">
-            <h3>Mostek, osprzęt, konserwacja</h3>
+            <h3>Cena od</h3>
             <ul class="price-list">
-              <li>
+              <li id="cena-setup">
+                <div>
+                  <strong>Setup i akcja strun</strong>
+                  <p>Kwota rośnie, gdy dochodzi mostek albo menzura.</p>
+                </div>
+                <p class="price"><span class="price-kind">cena od</span><span class="draft-tag">szkic</span>do uzupełnienia</p>
+              </li>
+              <li id="cena-progi">
+                <div>
+                  <strong>Progi: wyrównanie, koronowanie, polerowanie</strong>
+                  <p>Zależy od zużycia progów.</p>
+                </div>
+                <p class="price"><span class="price-kind">cena od</span><span class="draft-tag">szkic</span>do uzupełnienia</p>
+              </li>
+              <li id="cena-siodelko-wykonanie">
+                <div>
+                  <strong>Wykonanie siodełka</strong>
+                  <p>Praca i materiał wyceniane przed rozpoczęciem.</p>
+                </div>
+                <p class="price"><span class="price-kind">cena od</span><span class="draft-tag">szkic</span>do uzupełnienia</p>
+              </li>
+              <li id="cena-mostek">
                 <div>
                   <strong>Regulacja mostka</strong>
-                  <p>Wysokość, oktawy i podparcie strun.</p>
+                  <p>Mostek stały, tremolo albo mostek akustyczny.</p>
                 </div>
-                <p class="price"><span class="draft-tag">szkic</span>do uzupełnienia</p>
+                <p class="price"><span class="price-kind">cena od</span><span class="draft-tag">szkic</span>do uzupełnienia</p>
               </li>
-              <li>
+            </ul>
+          </div>
+
+          <div class="price-group">
+            <h3>Wycena indywidualna</h3>
+            <ul class="price-list">
+              <li id="cena-elektronika">
                 <div>
-                  <strong>Wymiana osprzętu</strong>
-                  <p>Zakres wymiany ustalamy przed zleceniem.</p>
+                  <strong>Elektronika</strong>
+                  <p>Praca przy przetwornikach, potencjometrach, przełączniku i gnieździe. Części osobno.</p>
                 </div>
-                <p class="price"><span class="draft-tag">szkic</span>do uzupełnienia</p>
+                <p class="price"><span class="price-kind">wycena indywidualna</span><span class="draft-tag">szkic</span>do uzupełnienia</p>
               </li>
-              <li>
+              <li id="cena-naprawa">
                 <div>
-                  <strong>Podstawowa konserwacja</strong>
-                  <p>Czyszczenie i pielęgnacja instrumentu.</p>
+                  <strong>Naprawa spoza listy</strong>
+                  <p>Tylko po diagnostyce i po akceptacji zakresu.</p>
                 </div>
-                <p class="price"><span class="draft-tag">szkic</span>do uzupełnienia</p>
-              </li>
-              <li>
-                <div>
-                  <strong>Diagnostyka i wycena</strong>
-                  <p>Oględziny i propozycja zakresu prac.</p>
-                </div>
-                <p class="price"><span class="draft-tag">szkic</span>do uzupełnienia</p>
+                <p class="price"><span class="price-kind">wycena indywidualna</span><span class="draft-tag">szkic</span>do uzupełnienia</p>
               </li>
             </ul>
           </div>
           <p class="note">
-            Ostateczna kwota zależy od stanu instrumentu i zakresu prac. Naprawa zaczyna się po
-            akceptacji wyceny.
+            Ceny dotyczą pracy. Struny, siodełka, olej, osprzęt i inne materiały doliczamy osobno
+            i wpisujemy je w wycenie, zanim cokolwiek wymienimy. Diagnostyka jest potrzebna, gdy z
+            opisu nie da się ustalić przyczyny albo gdy praca może wyjść poza regulację, setup,
+            progi, siodełko, mostek, elektronikę i konserwację.
           </p>
+        </div>
+      </section>
+
+      <section class="section" id="realizacje">
+        <div class="wrap">
+          <div class="section-heading">
+            <p class="eyebrow">Realizacje</p>
+            <h2>Dokumentacja prac</h2>
+            <p class="section-intro">
+              Nie ma jeszcze opisanych zleceń. Poniższy układ pokazuje, jak będzie wyglądał wpis,
+              gdy pojawią się własne zdjęcia i notatka z naprawy. To nie jest historia klienta.
+            </p>
+          </div>
+          <article class="case">
+            <div>
+              <p><span class="draft-tag">wzorzec</span> Miejsce na pierwszy wpis</p>
+              <h3>Realizacja do uzupełnienia</h3>
+              <dl class="case-facts">
+                <div>
+                  <dt>Instrument</dt>
+                  <dd>Rodzaj i model gitary.</dd>
+                </div>
+                <div>
+                  <dt>Zgłoszony problem</dt>
+                  <dd>To, z czym instrument przyszedł.</dd>
+                </div>
+                <div>
+                  <dt>Wykonane prace</dt>
+                  <dd>Tylko czynności, które naprawdę zostały zrobione.</dd>
+                </div>
+                <div>
+                  <dt>Efekt końcowy</dt>
+                  <dd>Co zmieniło się w grze albo w stanie technicznym.</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="before-after">
+              <figure class="media">
+                <img src="images/gallery/regulacja-gryf.svg" width="1200" height="900" alt="Puste miejsce na zdjęcie instrumentu przed pracą." loading="lazy" />
+                <figcaption>Zdjęcie przed — do dodania</figcaption>
+              </figure>
+              <figure class="media">
+                <img src="images/gallery/progi.svg" width="1200" height="900" alt="Puste miejsce na zdjęcie instrumentu po pracy." loading="lazy" />
+                <figcaption>Zdjęcie po — do dodania</figcaption>
+              </figure>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -323,31 +451,29 @@
         <div class="wrap about-layout">
           <div>
             <p class="eyebrow">O pracowni</p>
-            <h2>GRRITARA.PL</h2>
+            <h2>Niezależna pracownia na początku drogi</h2>
             <p>
-              GRRITARA.PL to marka serwisu gitarowego powiązana z Golden Rain Records. Ta strona
-              dotyczy regulacji, naprawy i podstawowej konserwacji gitar. Lekcje gry i warsztaty
-              powstaną później jako osobne podstrony.
+              GRRITARA.PL to rozwijająca się, niezależna pracownia serwisu gitarowego w
+              Szczecinie, powiązana z Golden Rain Records. Jest na początku działalności. Nie
+              podajemy tu stażu, certyfikatów ani opinii.
             </p>
             <p>
-              Pracę zaczynamy od opisu problemu i oględzin. Ustalamy, co wymaga regulacji albo
-              naprawy, i podajemy zakres oraz wycenę. Zlecenie wykonujemy po akceptacji. Termin
-              ustalamy przy konkretnym instrumencie.
+              Reputację budujemy na konkretnym instrumencie: najpierw ustalamy, co jest do zrobienia
+              i ile to kosztuje, a do pracy siadamy po akceptacji.
             </p>
-            <ol class="steps">
-              <li>Opisujesz instrument i problem.</li>
-              <li>Umawiamy oględziny.</li>
-              <li>Dostajesz zakres prac i wycenę.</li>
-              <li>Po akceptacji wykonujemy zlecenie.</li>
-              <li>Odbierasz instrument.</li>
-            </ol>
+            <ul class="trust-list">
+              <li>Każdą gitarę oglądamy indywidualnie, bez jednego ustawienia dla wszystkich.</li>
+              <li>Zakres prac uzgadniamy przed ich rozpoczęciem.</li>
+              <li>Koszt pracy i materiałów jest w wycenie, zanim cokolwiek wymienimy.</li>
+              <li>Instrument zostaje w zakresie, który został zaakceptowany.</li>
+            </ul>
           </div>
           <figure class="media">
             <img
               src="images/pracownia/wnetrze.svg"
               width="1200"
               height="900"
-              alt="Graficzne miejsce na zdjęcie pracowni. To nie jest fotografia wnętrza."
+              alt="Puste miejsce na zdjęcie pracowni GRRITARA w Szczecinie. To nie jest fotografia wnętrza."
               loading="lazy"
             />
             <figcaption>Miejsce na zdjęcie pracowni</figcaption>
@@ -358,13 +484,13 @@
       <section class="section" id="kontakt">
         <div class="wrap contact-layout">
           <div>
-            <p class="eyebrow">Kontakt</p>
-            <h2>Napisz o gitarze</h2>
+            <p class="eyebrow">Wycena</p>
+            <h2>Opisz gitarę</h2>
             <p class="section-intro">
-              Podaj imię, e-mail, rodzaj instrumentu i opis problemu. Formularz na razie tylko
-              sprawdza te pola na ekranie i nie wysyła wiadomości.
+              Wstępna konsultacja zaczyna się od opisu problemu. Formularz zbiera te informacje na
+              ekranie. Nie wysyła ich jeszcze nigdzie.
             </p>
-            <!-- KONTAKT: podmień wartości „do uzupełnienia” przed publikacją. -->
+            <!-- KONTAKT: podmień telefon i e-mail. Miasto jest potwierdzone, ulicy jeszcze nie ma. -->
             <ul class="contact-list">
               <li>
                 <h3>Telefon</h3>
@@ -376,12 +502,16 @@
               </li>
               <li>
                 <h3>Lokalizacja</h3>
-                <p><span class="draft-tag">szkic</span>do uzupełnienia</p>
+                <p>Szczecin. <span class="draft-tag">szkic</span>ulica i lokal do uzupełnienia</p>
               </li>
             </ul>
           </div>
 
-          <form id="contact-form" class="form">
+          <form id="contact-form" class="form" method="post" action="#kontakt">
+            <p id="form-notice" class="form-warning">
+              Przycisk nie wysyła zapytania. Nie ma jeszcze podłączonej skrzynki ani serwera, więc
+              po kliknięciu zobaczysz tylko informację, że nic nie wyszło.
+            </p>
             <label class="field">
               <span>Imię</span>
               <input type="text" name="name" autocomplete="name" required />
@@ -391,33 +521,35 @@
               <input type="email" name="email" autocomplete="email" required />
             </label>
             <label class="field">
-              <span>Rodzaj instrumentu</span>
+              <span>Telefon <span class="field-hint">(opcjonalnie)</span></span>
+              <input type="tel" name="phone" autocomplete="tel" />
+            </label>
+            <label class="field">
+              <span>Rodzaj gitary</span>
               <select name="instrument" required>
                 <option value="">Wybierz</option>
                 <option>Gitara elektryczna</option>
                 <option>Gitara akustyczna</option>
-                <option>Gitara klasyczna</option>
                 <option>Gitara basowa</option>
-                <option>Inny</option>
+                <option>Inna</option>
               </select>
+            </label>
+            <label class="field">
+              <span>Model gitary</span>
+              <input type="text" name="model" autocomplete="off" required />
+              <span class="field-hint">Jeśli nie znasz modelu, wpisz „nie wiem”.</span>
             </label>
             <label class="field">
               <span>Opis problemu</span>
               <textarea name="message" required></textarea>
             </label>
-            <!--
-              Gdy podłączysz wysyłkę, zamień blok .photo-slot na:
-              <label class="field">
-                <span>Zdjęcia (opcjonalnie)</span>
-                <input type="file" name="photos" accept="image/*" multiple />
-              </label>
-            -->
-            <div class="photo-slot">
-              <p>Zdjęcia instrumentu</p>
-              <p>To pole dodamy razem z prawdziwą wysyłką formularza. Na razie opisz problem w tekście.</p>
-            </div>
+            <label class="field">
+              <span>Zdjęcia instrumentu <span class="field-hint">(opcjonalnie)</span></span>
+              <input type="file" name="photos" accept="image/*" multiple />
+              <span class="field-hint">Możesz je wybrać, ale ten formularz ich nie przesyła.</span>
+            </label>
             <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
-            <button class="button" type="submit">Wyślij wiadomość</button>
+            <button class="button" type="submit">Wyślij zapytanie</button>
           </form>
         </div>
       </section>
@@ -427,6 +559,7 @@
       <div class="wrap footer-inner">
         <div>
           <strong>GRRITARA.PL</strong>
+          <p>Serwis gitar w Szczecinie.</p>
           <p>
             by
             <a href="https://goldenrainrecords.pl" rel="noopener noreferrer">Golden Rain Records</a>
@@ -435,10 +568,11 @@
         </div>
         <nav class="footer-links" aria-label="Stopka">
           <a href="#uslugi">Usługi</a>
+          <a href="#proces">Proces</a>
           <a href="#realizacje">Realizacje</a>
           <a href="#cennik">Cennik</a>
           <a href="#pracownia">Pracownia</a>
-          <a href="#kontakt">Kontakt</a>
+          <a href="#kontakt">Wycena</a>
         </nav>
       </div>
     </footer>

@@ -39,17 +39,14 @@ Potem otwórz [http://localhost:4173](http://localhost:4173).
 
 ## Osobne repozytorium GitHub
 
-Repozytorium lokalne jest już zainicjalizowane w tym folderze, na gałęzi `main`. Nie ma jeszcze zdalnego adresu i nie ma commitów.
+Repozytorium lokalne jest na gałęzi `main`. Jest jeden commit, a `origin` wskazuje na https://github.com/lenadobrynowicz/grritara.pl.git. To własne repozytorium strony GRRITARA.
 
-1. Na GitHub utwórz **nowe, puste** repozytorium, na przykład `grritara`. Bez README, bez `.gitignore` i bez licencji, żeby nie rozjechać historii.
-2. Nie podpinaj remote od `studio-website`.
-3. W tym folderze:
+Kolejne zmiany wysyłasz tak:
 
 ```powershell
 git add .
-git commit -m "Dodaj pierwsza wersje strony serwisu GRRITARA."
-git remote add origin https://github.com/TWOJ_LOGIN/grritara.git
-git push -u origin main
+git commit -m "Opis zmiany."
+git push
 ```
 
 Domena i hosting nie są skonfigurowane. Pliki są statyczne, więc później można je wystawić niezależnie, na przykład z GitHub Pages albo innego hostingu plików. To będzie osobna decyzja od strony Golden Rain Records.
@@ -81,10 +78,10 @@ Propozycja na ten etap, nie ostateczne logo: **Space Grotesk** w napisie GRRITAR
 
 ## Do uzupełnienia przed publikacją
 
-- telefon, e-mail i lokalizacja w sekcji Kontakt
-- kwoty w cenniku
-- własne zdjęcia instrumentu, realizacji i pracowni
-- prawdziwa wysyłka formularza (teraz przycisk nic nie wysyła)
-- pole zdjęć w formularzu (miejsce jest opisane w komentarzu HTML)
+- telefon i e-mail w sekcji wyceny
+- ulica i lokal w Szczecinie
+- kwoty w cenniku: zamieniaj tylko tekst „do uzupełnienia”
+- własne zdjęcia banera, pracowni oraz pary przed i po w realizacjach
+- prawdziwa wysyłka formularza (przycisk nic nie wysyła, także zdjęć)
+- kod weryfikacyjny Google Search Console w komentarzu w `index.html`
 - domena i hosting
-- pierwszy commit i nowe repozytorium GitHub

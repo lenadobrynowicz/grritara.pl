@@ -32,6 +32,14 @@ form.addEventListener("submit", (event) => {
     return;
   }
 
+  const photos = form.querySelector('input[name="photos"]');
+  const selected = photos && photos.files ? photos.files.length : 0;
+  const photoNote =
+    selected > 0
+      ? ` Wybrane zdjęcia (${selected}) zostały na tym urządzeniu i nie zostały nigdzie przesłane.`
+      : " Nie dołączono zdjęć.";
+
   status.textContent =
-    "Wiadomość nie została wysłana. Formularz nie ma jeszcze podłączonej wysyłki, więc nic nie trafiło na skrzynkę ani na telefon.";
+    "Zapytanie nie zostało wysłane. Formularz nie ma jeszcze podłączonej obsługi, więc opis nie trafił na e-mail ani na telefon." +
+    photoNote;
 });

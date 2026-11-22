@@ -234,11 +234,11 @@ p:last-child {
 }
 
 .nav-menu a:not(.button) {
-  padding: 0.45rem 0.75rem;
+  padding: 0.45rem 0.55rem;
   color: #f3f4f6;
-  font-size: 0.98rem;
+  font-size: 0.92rem;
   font-weight: 700;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   transition: color 200ms ease;
 }
 
@@ -259,6 +259,7 @@ p:last-child {
   font-weight: 800;
   letter-spacing: 0.08em;
   line-height: 1;
+  min-height: 2.75rem;
   padding: 0.9rem 1.25rem;
   text-transform: uppercase;
   box-shadow: 0 10px 28px rgba(239, 68, 68, 0.22);
@@ -339,8 +340,89 @@ p:last-child {
   border-color: rgba(239, 68, 68, 0.45);
 }
 
-.service-card p {
+.service-card p,
+.service-card dd {
   color: var(--muted);
+}
+
+.service-meta,
+.case-facts {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1rem 0 0;
+}
+
+.service-meta div,
+.case-facts div {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.service-meta dt,
+.case-facts dt {
+  color: #f4f4f5;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.service-meta dd,
+.case-facts dd {
+  margin: 0;
+}
+
+.service-card a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.case {
+  display: grid;
+  gap: 1.25rem;
+  padding: 1.2rem;
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+}
+
+.before-after {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.trust-list {
+  margin: 0.4rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.trust-list li {
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.price-kind {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.field-hint,
+.form-warning {
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+input[type="file"] {
+  padding: 0.65rem;
 }
 
 .price-group {
@@ -550,6 +632,14 @@ textarea {
   }
 }
 
+@media (min-width: 800px) {
+  .case,
+  .before-after {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
 @media (min-width: 900px) {
   .hero {
     grid-template-columns: 1.05fr 0.95fr;
@@ -574,7 +664,7 @@ textarea {
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1080px) {
   .nav-toggle {
     display: inline-flex;
     align-items: center;
