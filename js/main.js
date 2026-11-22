@@ -67,6 +67,37 @@ if (art && canParallax && !motionOff) {
   });
 }
 
+const marquee = document.querySelector(".marquee");
+const track = marquee && marquee.querySelector(".marquee-track");
+const sequence = track && track.querySelector("p");
+
+if (marquee && track && sequence) {
+  const unit = sequence.cloneNode(true);
+
+  function fillMarquee() {
+    const view = marquee.clientWidth;
+    const set = document.createElement("div");
+    set.className = "marquee-set";
+    set.append(unit.cloneNode(true));
+    track.replaceChildren(set);
+
+    let copies = 1;
+    while (set.offsetWidth < view + 8 && copies < 40) {
+      set.append(unit.cloneNode(true));
+      copies += 1;
+    }
+
+    track.append(set.cloneNode(true));
+    track.style.animationDuration = `${28 * copies}s`;
+  }
+
+  fillMarquee();
+  window.addEventListener("resize", fillMarquee);
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(fillMarquee);
+  }
+}
+
 document.querySelectorAll(".more-toggle").forEach((button) => {
   const panel = document.getElementById(button.getAttribute("aria-controls"));
   panel.setAttribute("aria-hidden", "true");
