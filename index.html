@@ -24,6 +24,7 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/motion.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -66,32 +67,89 @@
     </header>
 
     <main id="tresc">
-      <section class="hero wrap" id="start" data-media-root>
-        <div class="hero-copy">
-          <p class="eyebrow">Serwis gitar / Szczecin</p>
-          <h1>Serwis i regulacja gitar w Szczecinie.</h1>
-          <p class="slogan">Nie musisz przyzwyczajać się do źle ustawionej gitary.</p>
-          <p class="lead">Zajmuję się regulacją, serwisem i konserwacją gitar elektrycznych, akustycznych, klasycznych oraz basowych. Reguluję gryfy, mostki i akcję strun, ustawiam menzurę i intonację. Wykonuję również prace przy progach, siodełkach i elektronice.</p>
-          <p class="lead">Jeżeli struny są za wysoko, gitara brzęczy, nie stroi na wyższych pozycjach albo mostek nie pracuje prawidłowo, napisz, co się dzieje. Nie musisz samodzielnie diagnozować problemu.</p>
-          <div class="actions">
-            <a class="button button-ghost" href="#oferta">Zobacz ofertę</a>
-            <a class="button" href="https://wa.me/48453250511" target="_blank" rel="noopener noreferrer">Skontaktuj się</a>
+      <section class="hero" id="start">
+        <div class="wrap hero-grid" data-media-root>
+          <div class="hero-copy">
+            <p class="hero-mark">GRRITARA.PL</p>
+            <p class="eyebrow">Serwis gitar / Szczecin</p>
+            <h1>Serwis i regulacja gitar w Szczecinie.</h1>
+            <p class="slogan">Nie musisz przyzwyczajać się do źle ustawionej gitary.</p>
+            <p class="lead">Zajmuję się regulacją, serwisem i konserwacją gitar elektrycznych, akustycznych, klasycznych oraz basowych. Reguluję gryfy, mostki i akcję strun, ustawiam menzurę i intonację. Wykonuję również prace przy progach, siodełkach i elektronice.</p>
+            <p class="lead">Jeżeli struny są za wysoko, gitara brzęczy, nie stroi na wyższych pozycjach albo mostek nie pracuje prawidłowo, napisz, co się dzieje. Nie musisz samodzielnie diagnozować problemu.</p>
+            <div class="actions">
+              <a class="button button-ghost" href="#oferta">Zobacz ofertę</a>
+              <a class="button" href="https://wa.me/48453250511" target="_blank" rel="noopener noreferrer">Skontaktuj się</a>
+            </div>
           </div>
+          <div class="hero-art" aria-hidden="true">
+            <svg class="neck" viewBox="0 0 640 780" fill="none">
+              <defs>
+                <radialGradient id="neck-glow" cx="50%" cy="46%" r="42%">
+                  <stop offset="0%" stop-color="#ef4444" stop-opacity="0.34" />
+                  <stop offset="68%" stop-color="#ef4444" stop-opacity="0" />
+                </radialGradient>
+                <linearGradient id="string-fade" x1="320" y1="80" x2="320" y2="660" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#f4f4f5" stop-opacity="0.25" />
+                  <stop offset="100%" stop-color="#f4f4f5" stop-opacity="0.9" />
+                </linearGradient>
+              </defs>
+              <circle cx="330" cy="390" r="210" fill="url(#neck-glow)" />
+              <path d="M48 64h42M48 64v42M592 700h-42M592 700v-42" stroke="#ef4444" stroke-width="1" />
+              <path d="M78 150h28M78 150v28M560 150h-28M560 150v28" stroke="rgba(244,244,245,0.35)" stroke-width="1" />
+              <line x1="214" y1="96" x2="446" y2="96" stroke="#ef4444" stroke-width="1.4" />
+              <g stroke="rgba(244,244,245,0.16)" stroke-width="1">
+                <line x1="204" y1="168" x2="456" y2="168" />
+                <line x1="198" y1="248" x2="462" y2="248" />
+                <line x1="194" y1="336" x2="466" y2="336" />
+                <line x1="190" y1="430" x2="470" y2="430" />
+                <line x1="188" y1="524" x2="472" y2="524" />
+              </g>
+              <g stroke="url(#string-fade)" stroke-width="1.15" stroke-linecap="round">
+                <line class="string" x1="236" y1="96" x2="252" y2="640" />
+                <line class="string" x1="268" y1="96" x2="276" y2="640" />
+                <line class="string" x1="300" y1="96" x2="300" y2="640" />
+                <line class="string" x1="332" y1="96" x2="324" y2="640" />
+                <line class="string" x1="364" y1="96" x2="348" y2="640" />
+                <line class="string" x1="396" y1="96" x2="372" y2="640" />
+              </g>
+              <rect x="228" y="628" width="168" height="28" stroke="rgba(244,244,245,0.62)" />
+              <g stroke="rgba(244,244,245,0.45)">
+                <line x1="252" y1="628" x2="252" y2="656" />
+                <line x1="276" y1="628" x2="276" y2="656" />
+                <line x1="300" y1="628" x2="300" y2="656" />
+                <line x1="324" y1="628" x2="324" y2="656" />
+                <line x1="348" y1="628" x2="348" y2="656" />
+                <line x1="372" y1="628" x2="372" y2="656" />
+              </g>
+              <circle class="lamp" cx="330" cy="96" r="3.5" fill="#ef4444" />
+              <circle class="lamp" cx="252" cy="642" r="3" fill="#ef4444" />
+              <circle class="lamp" cx="372" cy="642" r="3" fill="#ef4444" />
+              <circle cx="300" cy="336" r="2" fill="#ef4444" fill-opacity="0.8" />
+            </svg>
+          </div>
+          <div class="media-slot" data-media="hero" data-alt="Gitara w serwisie GRRITARA w Szczecinie." hidden></div>
         </div>
-        <div class="media-slot" data-media="hero" data-alt="Gitara w serwisie GRRITARA w Szczecinie." hidden></div>
       </section>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <p>Regulacja<span>·</span>Mostki<span>·</span>Progi<span>·</span>Serwis gitar<span>·</span>Szczecin<span>·</span>GRRITARA<span>·</span></p>
+          <p>Regulacja<span>·</span>Mostki<span>·</span>Progi<span>·</span>Serwis gitar<span>·</span>Szczecin<span>·</span>GRRITARA<span>·</span></p>
+        </div>
+      </div>
 
       <section class="section" id="o-mnie">
         <div class="wrap studio" data-media-root>
+          <p class="about-name" aria-hidden="true">Kamil</p>
           <div class="copy">
             <p class="eyebrow">Poznaj mnie</p>
             <h2>Cześć, jestem Kamil.</h2>
-            <p>Na gitarze gram od ponad 10 lat. Od pięciu lat prowadzę lekcje gry, a od dziewięciu zajmuję się realizacją nagrań i produkcją muzyczną w Golden Rain Records.</p>
-            <p>Gitara jest obecna w różnych częściach mojej pracy. Gram, uczę innych i pracuję z instrumentami podczas nagrań. Znam ją więc nie tylko od strony samego grania, ale również tego, jak ważne jest jej prawidłowe ustawienie.</p>
-            <p>GRRITARA to moja oferta serwisowa – miejsce, w którym zajmuję się regulacją, konserwacją i pracami przy gitarach. Interesują mnie zarówno podstawowe ustawienia, jak i bardziej wymagające konstrukcje mostków. Pracuję z gitarami elektrycznymi, akustycznymi, klasycznymi i basowymi.</p>
-            <p>Nie każda gitara wymaga tego samego. Innego ustawienia potrzebuje instrument ze stałym mostkiem, innego tremolo, a jeszcze innego Floyd Rose. Znaczenie ma również grubość strun, używany strój i sposób gry.</p>
-            <p>Chcę, żeby gitarzysta mógł przyjść z instrumentem i powiedzieć po prostu, co mu w nim przeszkadza. Resztę ustalimy podczas oględzin.</p>
-            <p>GRRITARA.PL jest osobnym projektem, powiązanym z Golden Rain Records.</p>
+            <p class="reveal">Na gitarze gram od ponad 10 lat. Od pięciu lat prowadzę lekcje gry, a od dziewięciu zajmuję się realizacją nagrań i produkcją muzyczną w Golden Rain Records.</p>
+            <p class="reveal">Gitara jest obecna w różnych częściach mojej pracy. Gram, uczę innych i pracuję z instrumentami podczas nagrań. Znam ją więc nie tylko od strony samego grania, ale również tego, jak ważne jest jej prawidłowe ustawienie.</p>
+            <p class="reveal">GRRITARA to moja oferta serwisowa – miejsce, w którym zajmuję się regulacją, konserwacją i pracami przy gitarach. Interesują mnie zarówno podstawowe ustawienia, jak i bardziej wymagające konstrukcje mostków. Pracuję z gitarami elektrycznymi, akustycznymi, klasycznymi i basowymi.</p>
+            <p class="reveal">Nie każda gitara wymaga tego samego. Innego ustawienia potrzebuje instrument ze stałym mostkiem, innego tremolo, a jeszcze innego Floyd Rose. Znaczenie ma również grubość strun, używany strój i sposób gry.</p>
+            <p class="reveal">Chcę, żeby gitarzysta mógł przyjść z instrumentem i powiedzieć po prostu, co mu w nim przeszkadza. Resztę ustalimy podczas oględzin.</p>
+            <p class="reveal">GRRITARA.PL jest osobnym projektem, powiązanym z Golden Rain Records.</p>
             <div class="actions">
               <a class="button" href="https://goldenrainrecords.pl" target="_blank" rel="noopener noreferrer">Poznaj Golden Rain Records</a>
             </div>
@@ -255,17 +313,33 @@
       </section>
 
       <section class="section" id="wspolpraca">
-        <div class="wrap copy">
-          <h2>Nie musisz wiedzieć, co dokładnie jest nie tak.</h2>
-          <p>Napisz mi, co dzieje się z gitarą. Możesz przesłać zdjęcie instrumentu, opisać problem lub po prostu powiedzieć, co przeszkadza Ci podczas gry.</p>
-          <p>Po obejrzeniu gitary ustalam potrzebny zakres prac i przedstawiam koszt. Dodatkowe czynności i części zawsze wymagają wcześniejszego uzgodnienia.</p>
+        <div class="wrap axis-layout">
+          <div class="copy">
+            <h2>Nie musisz wiedzieć, co dokładnie jest nie tak.</h2>
+            <p>Napisz mi, co dzieje się z gitarą. Możesz przesłać zdjęcie instrumentu, opisać problem lub po prostu powiedzieć, co przeszkadza Ci podczas gry.</p>
+            <p>Po obejrzeniu gitary ustalam potrzebny zakres prac i przedstawiam koszt. Dodatkowe czynności i części zawsze wymagają wcześniejszego uzgodnienia.</p>
+          </div>
+          <ol class="axis">
+            <li>
+              <h3>Kontakt</h3>
+              <p>Klient opisuje problem.</p>
+            </li>
+            <li>
+              <h3>Oględziny</h3>
+              <p>Ustalam stan instrumentu i potrzebny zakres prac.</p>
+            </li>
+            <li>
+              <h3>Serwis</h3>
+              <p>Wykonuję uzgodnione czynności.</p>
+            </li>
+          </ol>
         </div>
       </section>
 
       <section class="section" id="kontakt">
         <div class="wrap">
           <h2>Masz gitarę do sprawdzenia?</h2>
-          <p class="lead">Zadzwoń lub napisz. Możesz przesłać zdjęcie mostka, gryfu albo miejsca, w którym pojawia się problem. Wspólnie ustalimy, od czego zacząć.</p>
+          <p class="lead">Opisz, co dzieje się z instrumentem. Możesz przesłać zdjęcia przez WhatsApp lub zadzwonić. Ustalimy, od czego warto zacząć.</p>
           <ul class="contact-list">
             <li>
               <h3>Telefon</h3>
@@ -281,9 +355,9 @@
             </li>
           </ul>
           <div class="contact-actions">
-            <a class="button" href="tel:+48453250511">Zadzwoń</a>
-            <a class="button button-ghost" href="https://wa.me/48453250511" target="_blank" rel="noopener noreferrer">Napisz na WhatsApp</a>
-            <a class="button button-ghost" href="mailto:goldenrainrecords.studio@gmail.com">Wyślij e-mail</a>
+            <a class="button" href="https://wa.me/48453250511" target="_blank" rel="noopener noreferrer">Napisz na WhatsApp</a>
+            <a class="button button-ghost" href="tel:+48453250511">Zadzwoń</a>
+            <a class="button button-ghost" href="mailto:goldenrainrecords.studio@gmail.com">Napisz e-mail</a>
           </div>
         </div>
       </section>
@@ -291,7 +365,7 @@
 
     <footer class="site-footer">
       <div class="wrap footer-inner">
-        <p>GRRITARA.PL by <a href="https://goldenrainrecords.pl" target="_blank" rel="noopener noreferrer">Golden Rain Records</a></p>
+        <p>GRRITARA.PL by <a href="https://goldenrainrecords.pl" target="_blank" rel="noopener noreferrer">Golden Rain Records</a>.</p>
         <nav class="footer-links" aria-label="Stopka">
           <a href="#oferta">Oferta</a>
           <a href="#o-mnie">O mnie</a>

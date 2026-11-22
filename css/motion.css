@@ -1,0 +1,464 @@
+html,
+body {
+  overflow-x: clip;
+}
+
+body {
+  background-color: #070708;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    radial-gradient(circle at 80% 12%, rgba(239, 68, 68, 0.14), transparent 28%);
+  background-size: 84px 84px, 84px 84px, auto;
+}
+
+.section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: max(1.25rem, calc((100% - var(--wrap)) / 2));
+  width: 2.4rem;
+  height: 1px;
+  background: var(--red);
+}
+
+.section {
+  position: relative;
+}
+
+.hero {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 0;
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 4rem);
+  min-height: calc(90svh - var(--header));
+  padding: 2.2rem 0 2.8rem;
+}
+
+.hero-mark {
+  margin: 0 0 1rem;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(0.95rem, 1.5vw, 1.2rem);
+  letter-spacing: 0.18em;
+}
+
+.hero-art {
+  margin: 0;
+  transition: transform 0.35s ease;
+}
+
+.neck {
+  display: block;
+  width: min(100%, 34rem);
+  height: auto;
+  margin-inline: auto;
+}
+
+.string {
+  stroke-dasharray: 640;
+  stroke-dashoffset: 640;
+  animation: draw 1.7s ease forwards;
+}
+
+.string:nth-child(2) { animation-delay: 0.08s; }
+.string:nth-child(3) { animation-delay: 0.16s; }
+.string:nth-child(4) { animation-delay: 0.24s; }
+.string:nth-child(5) { animation-delay: 0.32s; }
+.string:nth-child(6) { animation-delay: 0.4s; }
+
+.lamp {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pulse 3.4s ease-in-out infinite;
+}
+
+.hero-copy > * {
+  animation: rise 0.75s ease both;
+}
+
+.hero-copy > *:nth-child(2) { animation-delay: 0.08s; }
+.hero-copy > *:nth-child(3) { animation-delay: 0.16s; }
+.hero-copy > *:nth-child(4) { animation-delay: 0.24s; }
+.hero-copy > *:nth-child(5) { animation-delay: 0.32s; }
+.hero-copy > *:nth-child(6) { animation-delay: 0.4s; }
+.hero-copy > *:nth-child(7) { animation-delay: 0.48s; }
+
+.hero-grid.has-media .hero-art {
+  display: none;
+}
+
+.marquee {
+  overflow: hidden;
+  border-block: 1px solid var(--line);
+  background: #090909;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: ticker 28s linear infinite;
+}
+
+.marquee p {
+  display: flex;
+  gap: 1.4rem;
+  margin: 0;
+  padding: 0.85rem 0.7rem;
+  font-family: var(--display);
+  font-size: clamp(0.82rem, 1.4vw, 1rem);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.marquee span {
+  color: var(--red);
+}
+
+.studio {
+  align-items: start;
+}
+
+.about-name {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(4.2rem, 11vw, 8.5rem);
+  line-height: 0.8;
+  letter-spacing: -0.06em;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(239, 68, 68, 0.75);
+}
+
+#o-mnie .copy {
+  border-left: 1px solid var(--red);
+  padding-left: clamp(1.1rem, 2vw, 2rem);
+}
+
+.offer {
+  position: relative;
+  transition: background 0.35s ease;
+}
+
+.offer::before {
+  content: "";
+  position: absolute;
+  top: 1.4rem;
+  bottom: 1.4rem;
+  left: 0;
+  width: 1px;
+  background: var(--red);
+  transform: scaleY(0.18);
+  transform-origin: top;
+  transition: transform 0.45s ease;
+}
+
+.offer:hover,
+.offer:focus-within {
+  background: rgba(255, 255, 255, 0.028);
+}
+
+.offer:hover::before,
+.offer:focus-within::before {
+  transform: scaleY(1);
+}
+
+.offer h3 {
+  transition: color 0.3s ease;
+}
+
+.offer:hover h3,
+.offer:focus-within h3 {
+  color: #fff;
+}
+
+.offer .more-toggle {
+  transition: transform 0.3s ease;
+}
+
+.offer:hover .more-toggle {
+  transform: translateX(6px);
+}
+
+.fold-panel > div {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.fold-panel.is-open > div {
+  opacity: 1;
+  transform: none;
+}
+
+.axis-layout {
+  display: grid;
+  gap: 3rem;
+}
+
+.axis {
+  position: relative;
+  display: grid;
+  gap: 1.8rem;
+  margin: 0;
+  padding: 0.2rem 0 0;
+  list-style: none;
+}
+
+.axis::before,
+.axis::after {
+  content: "";
+  position: absolute;
+  left: 0.4rem;
+  top: 0.45rem;
+  bottom: 0.45rem;
+  width: 1px;
+}
+
+.axis::before {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.axis::after {
+  height: 0;
+  bottom: auto;
+  background: var(--red);
+  transition: height 1.1s ease;
+}
+
+.axis.is-in::after {
+  height: calc(100% - 0.9rem);
+}
+
+.axis li {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.axis li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.35rem;
+  width: 0.85rem;
+  height: 0.85rem;
+  border: 1px solid var(--red);
+  border-radius: 50%;
+  background: #080808;
+}
+
+.axis h3 {
+  margin-bottom: 0.4rem;
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+}
+
+.axis p {
+  max-width: 22rem;
+  color: var(--muted);
+}
+
+.motion .axis li {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.motion .axis.is-in li {
+  opacity: 1;
+  transform: none;
+}
+
+.motion .axis.is-in li:nth-child(2) { transition-delay: 0.15s; }
+.motion .axis.is-in li:nth-child(3) { transition-delay: 0.3s; }
+
+.motion .reveal,
+.motion .section {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.motion .reveal.is-in,
+.motion .section.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+#kontakt {
+  position: relative;
+  overflow: hidden;
+}
+
+#kontakt .wrap {
+  position: relative;
+  z-index: 1;
+}
+
+#kontakt::before {
+  content: "GRR";
+  position: absolute;
+  right: 0;
+  bottom: -0.18em;
+  z-index: 0;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(7rem, 22vw, 16rem);
+  line-height: 0.8;
+  letter-spacing: -0.07em;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.09);
+  pointer-events: none;
+}
+
+#kontakt::after {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 18%;
+  bottom: 22%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--red), transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: sweep 5.5s ease-in-out infinite;
+}
+
+@media (max-width: 720px) {
+  .hero-grid {
+    min-height: auto;
+    padding-bottom: 5.4rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.55rem, 12vw, 3.3rem);
+  }
+
+  .slogan {
+    font-size: clamp(1.55rem, 6.5vw, 2.05rem);
+  }
+}
+
+@media (min-width: 900px) {
+  .studio {
+    grid-template-columns: auto minmax(0, 38rem);
+    column-gap: clamp(2rem, 6vw, 6rem);
+  }
+
+  .about-name {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    align-self: stretch;
+  }
+
+  .axis-layout {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: start;
+  }
+
+  .axis {
+    padding-top: 2.2rem;
+  }
+
+  .axis,
+  .axis.is-in {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .axis::before,
+  .axis::after {
+    top: 0.4rem;
+    bottom: auto;
+    left: 0;
+    width: 100%;
+    height: 1px;
+  }
+
+  .axis::after {
+    width: 0;
+    height: 1px;
+  }
+
+  .axis.is-in::after {
+    width: 100%;
+    height: 1px;
+  }
+
+  .axis li {
+    padding: 1.5rem 1rem 0 0;
+  }
+
+  .axis li::before {
+    top: -2.15rem;
+  }
+}
+
+@media (min-width: 980px) {
+  .hero {
+    min-height: 0;
+  }
+
+  .hero-grid {
+    grid-template-columns: minmax(0, 1.05fr) minmax(260px, 0.95fr);
+  }
+}
+
+@keyframes draw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 1; }
+}
+
+@keyframes ticker {
+  to { transform: translateX(-50%); }
+}
+
+@keyframes sweep {
+  0%, 100% { transform: scaleX(0.15); }
+  50% { transform: scaleX(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .string,
+  .lamp,
+  .hero-copy > *,
+  .marquee-track,
+  #kontakt::after,
+  .fold-panel > div,
+  .offer,
+  .offer::before,
+  .offer .more-toggle,
+  .axis::after,
+  .motion .reveal,
+  .motion .section,
+  .motion .axis li {
+    animation: none;
+    transition: none;
+    opacity: 1;
+    transform: none;
+    stroke-dashoffset: 0;
+  }
+}
