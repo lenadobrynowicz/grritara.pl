@@ -1,9 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Miejsce na zdjęcie: Wnetrze pracowni">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Pracownia">
   <rect width="1200" height="900" fill="#101012"/>
-  <path d="M40 128 V40 H128" fill="none" stroke="#ef4444" stroke-width="2"/>
-  <path d="M1160 772 V860 H1072" fill="none" stroke="#ef4444" stroke-opacity="0.75" stroke-width="2"/>
-  
-  <text x="600" y="648" text-anchor="middle" fill="#f4f4f5" font-family="Segoe UI, sans-serif" font-size="26" letter-spacing="3">MIEJSCE NA ZDJĘCIE</text>
-  <text x="600" y="702" text-anchor="middle" fill="#fca5a5" font-family="Segoe UI, sans-serif" font-size="22">Wnętrze pracowni</text>
-  <text x="600" y="756" text-anchor="middle" fill="#a1a1aa" font-family="Segoe UI, sans-serif" font-size="15">pracownia/wnetrze.jpg</text>
+  <path d="M36 120 V36 H120" fill="none" stroke="#ef4444" stroke-width="1.5"/>
+  <path d="M1164 780 V864 H1080" fill="none" stroke="#ef4444" stroke-opacity="0.7" stroke-width="1.5"/>
+  <path d="M180 180 H1020 M180 450 H1020 M180 720 H1020" stroke="#f4f4f5" stroke-opacity="0.08" stroke-width="1" fill="none"/>
 </svg>

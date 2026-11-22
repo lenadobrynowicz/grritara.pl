@@ -16,30 +16,33 @@ menu.querySelectorAll("a").forEach((link) => {
 });
 
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
+  if (event.key !== "Escape") return;
+
+  if (menu.classList.contains("is-open")) {
     setMenu(false);
-  }
-});
-
-const form = document.querySelector("#contact-form");
-const status = document.querySelector("#form-status");
-
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  if (!form.checkValidity()) {
-    form.reportValidity();
+    toggle.focus();
     return;
   }
 
-  const photos = form.querySelector('input[name="photos"]');
-  const selected = photos && photos.files ? photos.files.length : 0;
-  const photoNote =
-    selected > 0
-      ? ` Wybrane zdjęcia (${selected}) zostały na tym urządzeniu i nie zostały nigdzie przesłane.`
-      : " Nie dołączono zdjęć.";
+  const fold = event.target.closest(".fold");
+  const button = fold && fold.querySelector(".more-toggle[aria-expanded='true']");
+  if (!button) return;
 
-  status.textContent =
-    "Zapytanie nie zostało wysłane. Formularz nie ma jeszcze podłączonej obsługi, więc opis nie trafił na e-mail ani na telefon." +
-    photoNote;
+  const panel = document.getElementById(button.getAttribute("aria-controls"));
+  button.setAttribute("aria-expanded", "false");
+  panel.classList.remove("is-open");
+  panel.setAttribute("aria-hidden", "true");
+  button.focus();
+});
+
+document.querySelectorAll(".more-toggle").forEach((button) => {
+  const panel = document.getElementById(button.getAttribute("aria-controls"));
+  panel.setAttribute("aria-hidden", "true");
+
+  button.addEventListener("click", () => {
+    const next = button.getAttribute("aria-expanded") !== "true";
+    button.setAttribute("aria-expanded", String(next));
+    panel.classList.toggle("is-open", next);
+    panel.setAttribute("aria-hidden", String(!next));
+  });
 });
