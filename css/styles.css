@@ -888,14 +888,20 @@ textarea {
 }
 
 .hero h1 {
-  max-width: 15ch;
-  font-size: clamp(3.3rem, 7.6vw, 7rem);
+  max-width: 11ch;
+  margin-top: 0.35rem;
+  font-size: clamp(3.4rem, 6.2vw, 6.2rem);
   letter-spacing: -0.045em;
-  line-height: 0.92;
+  line-height: 0.9;
 }
 
-.hero .lead + .lead {
-  margin-top: 1rem;
+.hero .slogan {
+  max-width: 24ch;
+  margin: 1.5rem 0 0;
+  color: var(--text);
+  font-size: clamp(1.25rem, 1.7vw, 1.65rem);
+  line-height: 1.25;
+  letter-spacing: -0.03em;
 }
 
 .media-slot[hidden] {
@@ -939,9 +945,14 @@ textarea {
 }
 
 .hero .lead {
-  max-width: 36rem;
-  margin-top: 1.15rem;
-  font-size: 1.12rem;
+  max-width: 42ch;
+  margin-top: 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.hero .actions {
+  margin-top: 2rem;
 }
 
 .offer {

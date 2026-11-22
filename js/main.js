@@ -52,20 +52,113 @@ if (!motionOff && "IntersectionObserver" in window) {
   document.querySelectorAll(".reveal, .section, .axis").forEach((node) => node.classList.add("is-in"));
 }
 
-const art = document.querySelector(".hero-art");
-const canParallax = window.matchMedia("(hover: hover) and (min-width: 980px)").matches;
-if (art && canParallax && !motionOff) {
-  const hero = document.querySelector(".hero");
-  hero.addEventListener("pointermove", (event) => {
-    const box = hero.getBoundingClientRect();
-    const x = (event.clientX - box.left) / box.width - 0.5;
-    const y = (event.clientY - box.top) / box.height - 0.5;
-    art.style.transform = `translate3d(${x * 16}px, ${y * 12}px, 0)`;
-  });
-  hero.addEventListener("pointerleave", () => {
-    art.style.transform = "";
-  });
+const strings = document.querySelectorAll(".g-string");
+let audioCtx = null;
+let activeVoice = null;
+let nextSoundAt = 0;
+
+function stringWave(amplitude, phase) {
+  const mid = 16;
+  let path = `M0 ${mid}`;
+  const steps = 28;
+  for (let i = 1; i <= steps; i += 1) {
+    const along = i / steps;
+    const x = 640 * along;
+    const envelope = Math.sin(along * Math.PI);
+    const y = mid + Math.sin(along * Math.PI * 2 + phase) * amplitude * envelope;
+    path += ` L${x.toFixed(1)} ${y.toFixed(2)}`;
+  }
+  return path;
 }
+
+function pluckString(button) {
+  const path = button.querySelector(".wave");
+  button.classList.add("is-lit");
+  window.setTimeout(() => button.classList.remove("is-lit"), 700);
+  if (!path || motionOff) return;
+
+  const started = performance.now();
+  function frame(now) {
+    const progress = Math.min(1, (now - started) / 640);
+    const amplitude = Math.sin(progress * Math.PI) * (1 - progress) * 7.5;
+    path.setAttribute("d", stringWave(amplitude, progress * Math.PI * 7));
+    if (progress < 1) requestAnimationFrame(frame);
+    else path.setAttribute("d", "M0 16 H640");
+  }
+  requestAnimationFrame(frame);
+}
+
+function pluckedBuffer(frequency) {
+  const sampleRate = audioCtx.sampleRate;
+  const period = Math.max(2, Math.round(sampleRate / frequency));
+  const duration = 1.7;
+  const length = Math.floor(sampleRate * duration);
+  const buffer = audioCtx.createBuffer(1, length, sampleRate);
+  const data = buffer.getChannelData(0);
+  const noise = new Float32Array(period);
+  for (let i = 0; i < period; i += 1) {
+    noise[i] = (Math.random() * 2 - 1) * Math.sin((Math.PI * i) / period);
+  }
+  let previous = 0;
+  const decay = Math.min(0.996, 0.978 + 8 / frequency);
+  for (let i = 0; i < length; i += 1) {
+    const current = noise[i % period];
+    const filtered = decay * ((current + previous) * 0.5);
+    noise[i % period] = filtered;
+    previous = current;
+    data[i] = filtered;
+  }
+  return buffer;
+}
+
+function playString(button) {
+  pluckString(button);
+  const now = performance.now();
+  if (now < nextSoundAt) return;
+  nextSoundAt = now + 170;
+
+  const AudioContext = window.AudioContext || window.webkitAudioContext;
+  if (!AudioContext) return;
+  if (!audioCtx) audioCtx = new AudioContext();
+  if (audioCtx.state === "suspended") audioCtx.resume();
+
+  if (activeVoice) {
+    activeVoice.gain.gain.cancelScheduledValues(audioCtx.currentTime);
+    activeVoice.gain.gain.setTargetAtTime(0.0001, audioCtx.currentTime, 0.02);
+    activeVoice.source.stop(audioCtx.currentTime + 0.06);
+  }
+
+  const source = audioCtx.createBufferSource();
+  source.buffer = pluckedBuffer(Number(button.dataset.freq));
+  const tone = audioCtx.createBiquadFilter();
+  tone.type = "lowpass";
+  tone.frequency.value = 2400;
+  const gain = audioCtx.createGain();
+  const level = Math.min(0.34, 0.16 + 18 / Number(button.dataset.freq));
+  gain.gain.setValueAtTime(level, audioCtx.currentTime);
+  gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 1.65);
+  source.connect(tone);
+  tone.connect(gain);
+  gain.connect(audioCtx.destination);
+  source.start();
+  source.stop(audioCtx.currentTime + 1.7);
+  activeVoice = { source, gain };
+}
+
+strings.forEach((button) => {
+  button.addEventListener("pointerenter", (event) => {
+    if (event.pointerType !== "mouse") return;
+    playString(button);
+  });
+  button.addEventListener("pointerdown", (event) => {
+    if (event.pointerType === "mouse") return;
+    playString(button);
+  });
+  button.addEventListener("click", (event) => {
+    if (event.detail !== 0) return;
+    playString(button);
+  });
+});
 
 const marquee = document.querySelector(".marquee");
 const track = marquee && marquee.querySelector(".marquee-track");
