@@ -9,7 +9,13 @@
   --display: "Space Grotesk", "Segoe UI", sans-serif;
   --body: "Manrope", "Segoe UI", sans-serif;
   --header: 4.5rem;
-  --wrap: 1240px;
+  --page-max-width: 1200px;
+  --page-gutter: 40px;
+  --section-spacing: 128px;
+  --content-gap: 24px;
+  --text-measure: 68ch;
+  --space: 8px;
+  --wrap: var(--page-max-width);
   color-scheme: dark;
 }
 
@@ -119,7 +125,7 @@ p {
 }
 
 .wrap {
-  width: min(var(--wrap), calc(100% - clamp(2.25rem, 9vw, 8rem)));
+  width: min(var(--page-max-width), calc(100% - (var(--page-gutter) * 2)));
   margin-inline: auto;
 }
 
@@ -194,6 +200,7 @@ p {
   font-size: clamp(0.95rem, 2vw, 1.12rem);
   letter-spacing: 0.14em;
   line-height: 1;
+  white-space: nowrap;
 }
 
 .brand-by {
@@ -248,7 +255,7 @@ p {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 0.15rem;
+  gap: calc(var(--space) * 2);
 }
 
 .nav-menu a {
@@ -375,8 +382,8 @@ p {
 }
 
 .section {
-  padding: clamp(5.5rem, 11vw, 9rem) 0;
-  scroll-margin-top: calc(var(--header) + 0.8rem);
+  padding: var(--section-spacing) 0;
+  scroll-margin-top: calc(var(--header) + var(--space));
   border-top: 1px solid var(--line);
 }
 
@@ -649,7 +656,7 @@ textarea {
 }
 
 .site-footer {
-  padding: 1.6rem 0 5.5rem;
+  padding: calc(var(--space) * 6) 0;
   border-top: 1px solid var(--line);
   color: var(--muted);
 }
@@ -946,15 +953,20 @@ textarea {
   border-bottom: 1px solid var(--line);
 }
 
+.offer-head > div {
+  min-width: 0;
+}
+
 .offer h3 {
-  max-width: 14ch;
+  max-width: none;
   font-size: clamp(2.4rem, 5vw, 4.2rem);
 }
 
 .offer-head {
   display: grid;
-  gap: 1.4rem;
-  align-items: end;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--content-gap);
+  align-items: start;
 }
 
 .offer-short {
@@ -1016,11 +1028,12 @@ textarea {
 }
 
 .rate li {
-  display: flex;
-  justify-content: space-between;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: calc(var(--space) * 2);
   align-items: baseline;
-  padding: 0.95rem 0;
+  min-height: 3rem;
+  padding: 0.75rem 0;
   border-top: 1px solid var(--line);
   color: var(--text);
 }
@@ -1050,7 +1063,14 @@ textarea {
 }
 
 .copy {
-  max-width: 38rem;
+  max-width: none;
+}
+
+.copy p,
+.lead,
+.offer-short,
+.note {
+  max-width: var(--text-measure);
 }
 
 .copy h2,
@@ -1116,6 +1136,7 @@ h2 + .lead {
   position: relative;
   display: inline-flex;
   align-items: center;
+  white-space: nowrap;
   min-height: 2.75rem;
   margin-top: 0.85rem;
   padding: 0.4rem 1.6rem 0.4rem 0;
@@ -1213,12 +1234,12 @@ h2 + .lead {
 @media (min-width: 900px) {
   .offer-head {
     grid-template-columns: minmax(0, 1fr) auto;
-    column-gap: 3rem;
+    column-gap: var(--content-gap);
   }
 
   .offer-open {
-    grid-template-columns: minmax(0, 1.15fr) minmax(16rem, 0.85fr);
-    column-gap: 4.5rem;
+    grid-template-columns: minmax(0, 65fr) minmax(0, 35fr);
+    column-gap: var(--content-gap);
     align-items: start;
   }
 
@@ -1233,8 +1254,7 @@ h2 + .lead {
   }
 
   .rate li:first-child {
-    border-top: 0;
-    padding-top: 0;
+    border-top: 1px solid var(--line);
   }
 
   .studio.has-media {
@@ -1273,9 +1293,8 @@ h2 + .lead {
 
 @media (max-width: 640px) {
   .rate li {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.25rem;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: baseline;
   }
 
   .svc-top,
@@ -1285,6 +1304,94 @@ h2 + .lead {
 
   .svc-price {
     white-space: normal;
+  }
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--content-gap);
+  margin: calc(var(--space) * 8) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-grid li {
+  min-width: 0;
+  min-height: 100%;
+  padding-top: var(--content-gap);
+  border-top: 1px solid var(--line);
+}
+
+.contact-grid h3 {
+  margin-bottom: var(--space);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.contact-grid a {
+  color: var(--text);
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: -0.03em;
+  line-height: 1.3;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.section h2,
+.copy h2,
+#oferta > .wrap > h2,
+#kontakt h2 {
+  margin-bottom: calc(var(--space) * 3);
+}
+
+.copy p + p {
+  margin-top: calc(var(--space) * 2);
+}
+
+#oferta .section-lead {
+  margin-bottom: calc(var(--space) * 6);
+}
+
+.offer {
+  padding: calc(var(--space) * 4) 0;
+}
+
+.offer-head {
+  align-items: start;
+}
+
+.offer .more-toggle {
+  justify-self: end;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --page-gutter: 32px;
+    --section-spacing: 88px;
+  }
+
+  .contact-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  :root {
+    --page-gutter: 20px;
+    --section-spacing: 72px;
+  }
+
+  .contact-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .offer-head {
+    grid-template-columns: minmax(0, 1fr) auto;
   }
 }
 
