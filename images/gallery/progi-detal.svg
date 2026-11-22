@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1200" viewBox="0 0 1000 1200" role="img" aria-label="Miejsce na zdjęcie: Progi">
+  <rect width="1000" height="1200" fill="#101012"/>
+  <path d="M28 96 V28 H96" fill="none" stroke="#ef4444" stroke-width="1.5"/>
+  <path d="M972 1104 V1172 H904" fill="none" stroke="#ef4444" stroke-opacity="0.7" stroke-width="1.5"/>
+  <path d="M500 216 V672" stroke="#f4f4f5" stroke-opacity="0.28" stroke-width="8" fill="none"/>
+  <path d="M458 292 H542" stroke="#f4f4f5" stroke-opacity="0.2" stroke-width="2" fill="none"/>
+  <path d="M458 368 H542" stroke="#f4f4f5" stroke-opacity="0.2" stroke-width="2" fill="none"/>
+  <path d="M458 444 H542" stroke="#f4f4f5" stroke-opacity="0.2" stroke-width="2" fill="none"/>
+  <path d="M458 520 H542" stroke="#f4f4f5" stroke-opacity="0.2" stroke-width="2" fill="none"/>
+  <path d="M458 596 H542" stroke="#f4f4f5" stroke-opacity="0.2" stroke-width="2" fill="none"/>
+  <text x="500" y="864" text-anchor="middle" fill="#f4f4f5" font-family="Segoe UI, sans-serif" font-size="22" letter-spacing="3">MIEJSCE NA ZDJĘCIE</text>
+  <text x="500" y="936" text-anchor="middle" fill="#fca5a5" font-family="Segoe UI, sans-serif" font-size="18">Progi</text>
+  <text x="500" y="1008" text-anchor="middle" fill="#a1a1aa" font-family="Segoe UI, sans-serif" font-size="14">gallery/progi-detal.jpg</text>
+</svg>

@@ -78,10 +78,8 @@ Propozycja na ten etap, nie ostateczne logo: **Space Grotesk** w napisie GRRITAR
 
 ## Do uzupełnienia przed publikacją
 
-- telefon i e-mail w sekcji wyceny
-- ulica i lokal w Szczecinie
-- kwoty w cenniku: zamieniaj tylko tekst „do uzupełnienia”
-- własne zdjęcia banera, pracowni oraz pary przed i po w realizacjach
+- ulica lokalu w Szczecinie, jeśli ma być publikowana
+- własne zdjęcia: `images/hero/instrument.jpg`, `images/gallery/instrument.jpg`, `progi-detal.jpg`, `przed.jpg`, `po.jpg`
 - prawdziwa wysyłka formularza (przycisk nic nie wysyła, także zdjęć)
 - kod weryfikacyjny Google Search Console w komentarzu w `index.html`
 - domena i hosting

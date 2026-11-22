@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-label="Miejsce na zdjęcie: Instrument">
+  <rect width="1400" height="900" fill="#101012"/>
+  <path d="M28 96 V28 H96" fill="none" stroke="#ef4444" stroke-width="1.5"/>
+  <path d="M1372 804 V872 H1304" fill="none" stroke="#ef4444" stroke-opacity="0.7" stroke-width="1.5"/>
+  <path d="M700 162 V504" stroke="#f4f4f5" stroke-opacity="0.28" stroke-width="8" fill="none"/>
+  <path d="M658 219 H742" stroke="#f4f4f5" stroke-opacity="0.2" stroke-width="2" fill="none"/>
+  <path d="M658 276 H742" stroke="#f4f4f5" stroke-opacity="0.2" stroke-width="2" fill="none"/>
+  <path d="M658 333 H742" stroke="#f4f4f5" stroke-opacity="0.2" stroke-width="2" fill="none"/>
+  <path d="M658 390 H742" stroke="#f4f4f5" stroke-opacity="0.2" stroke-width="2" fill="none"/>
+  <path d="M658 447 H742" stroke="#f4f4f5" stroke-opacity="0.2" stroke-width="2" fill="none"/>
+  <text x="700" y="648" text-anchor="middle" fill="#f4f4f5" font-family="Segoe UI, sans-serif" font-size="22" letter-spacing="3">MIEJSCE NA ZDJĘCIE</text>
+  <text x="700" y="702" text-anchor="middle" fill="#fca5a5" font-family="Segoe UI, sans-serif" font-size="18">Instrument</text>
+  <text x="700" y="756" text-anchor="middle" fill="#a1a1aa" font-family="Segoe UI, sans-serif" font-size="14">gallery/instrument.jpg</text>
+</svg>
