@@ -982,6 +982,33 @@ textarea {
   margin-top: 1rem;
 }
 
+.offer-copy h4 {
+  margin-top: 1.85rem;
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
+}
+
+.offer-copy > h4:first-child,
+.offer-copy > .media-slot[hidden] + h4 {
+  margin-top: 0;
+}
+
+.offer-copy h4 + p {
+  margin-top: 0.65rem;
+}
+
+.rate-label {
+  margin: 1.6rem 0 0.15rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.rate-col > .rate-label:first-child {
+  margin-top: 0;
+}
+
 .rate {
   list-style: none;
   margin: 0;
@@ -1010,7 +1037,12 @@ textarea {
 }
 
 #oferta > .wrap > h2 {
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#oferta .section-lead {
+  max-width: 36rem;
+  margin-bottom: 3.2rem;
 }
 
 #oferta .note {
@@ -1023,7 +1055,7 @@ textarea {
 
 .copy h2,
 #kontakt h2,
-#zlecenie h2 {
+#wspolpraca h2 {
   margin-bottom: 1.6rem;
 }
 
@@ -1190,9 +1222,14 @@ h2 + .lead {
     align-items: start;
   }
 
-  .rate {
+  .rate-col {
     padding-left: 2.5rem;
     border-left: 1px solid var(--line);
+  }
+
+  .offer-open .rate {
+    padding-left: 0;
+    border-left: 0;
   }
 
   .rate li:first-child {
