@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1120" viewBox="0 0 900 1120" role="img" aria-label="Miejsce na zdjęcie: Instrument">
+  <rect width="900" height="1120" fill="#101012"/>
+  <path d="M40 128 V40 H128" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <path d="M860 992 V1080 H772" fill="none" stroke="#ef4444" stroke-opacity="0.75" stroke-width="2"/>
+  <path d="M450 179 V649" stroke="#f4f4f5" stroke-opacity="0.28" stroke-width="8" fill="none"/>
+  <path d="M404 246 H496" stroke="#f4f4f5" stroke-opacity="0.2" stroke-width="2" fill="none"/>
+  <path d="M404 313 H496" stroke="#f4f4f5" stroke-opacity="0.2" stroke-width="2" fill="none"/>
+  <path d="M404 380 H496" stroke="#f4f4f5" stroke-opacity="0.2" stroke-width="2" fill="none"/>
+  <path d="M404 447 H496" stroke="#f4f4f5" stroke-opacity="0.2" stroke-width="2" fill="none"/>
+  <path d="M404 514 H496" stroke="#f4f4f5" stroke-opacity="0.2" stroke-width="2" fill="none"/>
+  <path d="M404 581 H496" stroke="#f4f4f5" stroke-opacity="0.2" stroke-width="2" fill="none"/>
+  <text x="450" y="806" text-anchor="middle" fill="#f4f4f5" font-family="Segoe UI, sans-serif" font-size="20" letter-spacing="3">MIEJSCE NA ZDJĘCIE</text>
+  <text x="450" y="873" text-anchor="middle" fill="#fca5a5" font-family="Segoe UI, sans-serif" font-size="17">Instrument</text>
+  <text x="450" y="940" text-anchor="middle" fill="#a1a1aa" font-family="Segoe UI, sans-serif" font-size="15">hero/instrument.jpg</text>
+</svg>

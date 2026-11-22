@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Miejsce na zdjęcie: Wnetrze pracowni">
+  <rect width="1200" height="900" fill="#101012"/>
+  <path d="M40 128 V40 H128" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <path d="M1160 772 V860 H1072" fill="none" stroke="#ef4444" stroke-opacity="0.75" stroke-width="2"/>
+  
+  <text x="600" y="648" text-anchor="middle" fill="#f4f4f5" font-family="Segoe UI, sans-serif" font-size="26" letter-spacing="3">MIEJSCE NA ZDJĘCIE</text>
+  <text x="600" y="702" text-anchor="middle" fill="#fca5a5" font-family="Segoe UI, sans-serif" font-size="22">Wnętrze pracowni</text>
+  <text x="600" y="756" text-anchor="middle" fill="#a1a1aa" font-family="Segoe UI, sans-serif" font-size="15">pracownia/wnetrze.jpg</text>
+</svg>

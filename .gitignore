@@ -1,0 +1,16 @@
+# system
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# edytory
+.vscode/
+.idea/
+
+# sekrety i zaleznosci na pozniej
+.env
+.env.*
+node_modules/
+dist/
+.astro/
+*.log
