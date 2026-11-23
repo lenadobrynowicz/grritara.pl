@@ -194,7 +194,7 @@ p {
 
 .brand-name {
   display: block;
-  font-family: "DM Sans", "Segoe UI", sans-serif;
+  font-family: "Instrument Sans", "Segoe UI", sans-serif;
   font-weight: 700;
   font-size: 1.05rem;
   letter-spacing: 0.18em;
@@ -884,12 +884,12 @@ textarea {
 
 .hero-copy {
   min-width: 0;
-  font-family: "DM Sans", "Segoe UI", sans-serif;
+  font-family: "Instrument Sans", "Segoe UI", sans-serif;
 }
 
 .hero .eyebrow {
-  font-family: "DM Sans", "Segoe UI", sans-serif;
-  font-weight: 500;
+  font-family: "Instrument Sans", "Segoe UI", sans-serif;
+  font-weight: 600;
 }
 
 .hero h1 {
@@ -897,17 +897,17 @@ textarea {
   flex-direction: column;
   max-width: none;
   margin-top: 0.7rem;
-  font-family: "Outfit", "Segoe UI", sans-serif;
-  font-weight: 800;
-  font-size: clamp(2.85rem, 12.8vw, 4.75rem);
-  letter-spacing: -0.035em;
-  line-height: 0.92;
+  font-family: "Instrument Sans", "Segoe UI", sans-serif;
+  font-weight: 650;
+  font-size: clamp(2.7rem, 12vw, 4.4rem);
+  letter-spacing: -0.028em;
+  line-height: 0.97;
   text-wrap: wrap;
 }
 
 @media (min-width: 1100px) {
   .hero h1 {
-    font-size: clamp(92px, calc(92px + (100vw - 1280px) * 0.0875), 120px);
+    font-size: clamp(80px, calc(80px + (100vw - 1280px) * 0.1), 112px);
   }
 }
 
@@ -920,8 +920,8 @@ textarea {
   max-width: 36rem;
   margin: 1.75rem 0 0;
   color: var(--text);
-  font-family: "DM Sans", "Segoe UI", sans-serif;
-  font-weight: 600;
+  font-family: "Instrument Sans", "Segoe UI", sans-serif;
+  font-weight: 500;
   font-size: clamp(26px, 1.56vw, 30px);
   line-height: 1.2;
   letter-spacing: -0.015em;
@@ -968,7 +968,7 @@ textarea {
 }
 
 .hero .button {
-  font-family: "DM Sans", "Segoe UI", sans-serif;
+  font-family: "Instrument Sans", "Segoe UI", sans-serif;
   font-weight: 600;
 }
 
