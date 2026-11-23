@@ -428,21 +428,14 @@ body {
   }
 
   .hero h1 {
-    font-size: clamp(2.45rem, 10.5vw, 3.15rem);
+    font-size: clamp(2.85rem, 13.4vw, 3.7rem);
   }
 
   .hero .slogan {
     margin: 1rem 0 0;
-    font-size: clamp(1.15rem, 4.4vw, 1.4rem);
+    font-size: clamp(1.2rem, 4.6vw, 1.45rem);
     font-weight: 600;
     line-height: 1.2;
-  }
-
-  .hero .lead,
-  .hero .lead + .lead {
-    margin-top: calc(var(--space) * 2);
-    font-size: 1rem;
-    line-height: 1.55;
   }
 
   .hero .actions {
