@@ -175,13 +175,13 @@ if (marquee && track && sequence) {
     track.replaceChildren(set);
 
     let copies = 1;
-    while (set.offsetWidth < view + 8 && copies < 40) {
+    while (set.offsetWidth < view + 32 && copies < 40) {
       set.append(unit.cloneNode(true));
       copies += 1;
     }
 
     track.append(set.cloneNode(true));
-    track.style.animationDuration = `${28 * copies}s`;
+    track.style.animationDuration = "32s";
   }
 
   fillMarquee();
