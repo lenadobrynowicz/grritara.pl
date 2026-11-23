@@ -194,10 +194,10 @@ p {
 
 .brand-name {
   display: block;
-  font-family: var(--display);
-  font-weight: 600;
-  font-size: clamp(0.95rem, 2vw, 1.12rem);
-  letter-spacing: 0.14em;
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.18em;
   line-height: 1;
   white-space: nowrap;
 }
@@ -884,23 +884,41 @@ textarea {
 
 .hero-copy {
   min-width: 0;
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+}
+
+.hero .eyebrow {
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+  font-weight: 500;
 }
 
 .hero h1 {
-  max-width: 12ch;
-  margin-top: 0.35rem;
-  font-size: clamp(3.4rem, 6.2vw, 6.2rem);
-  letter-spacing: -0.045em;
-  line-height: 0.9;
+  display: flex;
+  flex-direction: column;
+  max-width: none;
+  margin-top: 0.85rem;
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+  font-weight: 700;
+  font-size: clamp(76px, calc(76px + (100vw - 1280px) * 0.03125), 96px);
+  letter-spacing: -0.02em;
+  line-height: 0.98;
+  text-wrap: wrap;
+}
+
+.hero h1 span {
+  display: block;
+  white-space: nowrap;
 }
 
 .hero .slogan {
-  max-width: 24ch;
-  margin: 1.5rem 0 0;
+  max-width: 36rem;
+  margin: 1.75rem 0 0;
   color: var(--text);
-  font-size: clamp(1.25rem, 1.7vw, 1.65rem);
-  line-height: 1.25;
-  letter-spacing: -0.03em;
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+  font-weight: 600;
+  font-size: clamp(26px, 1.56vw, 30px);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
 }
 
 .media-slot[hidden] {
@@ -944,10 +962,17 @@ textarea {
 }
 
 .hero .lead {
-  max-width: 42ch;
-  margin-top: 1.5rem;
-  font-size: 1.05rem;
+  max-width: 580px;
+  margin-top: 1.35rem;
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+  font-weight: 400;
+  font-size: clamp(18px, 1vw, 19px);
   line-height: 1.6;
+}
+
+.hero .button {
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+  font-weight: 600;
 }
 
 .hero .actions {
