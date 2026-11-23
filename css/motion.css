@@ -7,9 +7,8 @@ body {
   background-color: #070708;
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    radial-gradient(circle at 80% 12%, rgba(239, 68, 68, 0.14), transparent 28%);
-  background-size: 84px 84px, 84px 84px, auto;
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 84px 84px, 84px 84px;
 }
 
 .section::after {
@@ -33,6 +32,15 @@ body {
   overflow: hidden;
   min-height: max(620px, calc(100svh - var(--header) - var(--marquee-height)));
   padding: clamp(72px, 9vh, 120px) 0;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(circle at 82% 36%, rgba(239, 68, 68, 0.14), transparent 46%);
+  pointer-events: none;
 }
 
 .hero-grid {
@@ -624,10 +632,3 @@ body {
   }
 }
 
-@media (max-width: 720px) {
-  #oferta.is-in .opening-sweep,
-  #oferta.is-in .opening-spark {
-    animation: none;
-    opacity: 0;
-  }
-}
